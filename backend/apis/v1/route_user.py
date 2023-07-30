@@ -1,10 +1,13 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, status          #modified
 from sqlalchemy.orm import Session
 from fastapi import Depends
 
-from schemas.user import UserCreate
+
+from schemas.user import UserCreate,ShowUser  #modified
 from db.session import get_db
 from db.repository.user import create_new_user
+
+
 
 router = APIRouter()
 

@@ -3,7 +3,8 @@ from core.config import settings
 from db.session import engine 
 from db.base import Base   
 from apis.base import api_router 
-
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import PlainTextResponse
 
 def create_tables():         
 	Base.metadata.create_all(bind=engine)
